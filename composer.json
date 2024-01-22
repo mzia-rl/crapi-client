@@ -1,0 +1,29 @@
+{
+    "name": "canzell/crapi-client",
+    "description": "Utility library for interacting with the CRAPI.",
+    "type": "project",
+    "require": {
+        "guzzlehttp/guzzle": "^7.2"
+    },
+    "authors": [
+        {
+            "name": "Isaiah Smith",
+            "email": "7606654-isaiah.smith@users.noreply.gitlab.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Canzell\\": "./src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Canzell\\Providers\\CRAPIClientServiceProvider"
+            ],
+            "aliases": {
+                "CRAPI": "Canzell\\Facades\\CRAPI"
+            }
+        }
+    }
+}
